@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Stomp:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Stomp_jar</output-path>
+    <root id="archive" name="Stomp.jar">
+      <element id="module-output" name="Stomp" />
+    </root>
+  </artifact>
+</component>

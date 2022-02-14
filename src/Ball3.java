@@ -40,6 +40,7 @@ public class Ball3 {
 			right = 39;
 			down = 40;
 			change = 35;
+			color = 4;
 		}
 
 		if (keyboardi == 1) {
@@ -48,6 +49,11 @@ public class Ball3 {
 			right = 68;
 			down = 83;
 			change = 69;
+			color = 0;
+		}
+
+		if (keyboardi ==2) {
+			color = 0;
 		}
 
 		rx = x;
@@ -55,7 +61,6 @@ public class Ball3 {
 		vx = 0.015 - Math.random() * 0.03;
 		vy = 0.015 - Math.random() * 0.03;
 		radius = .15;
-		color = (int) (Math.random() * 6);
 		bouncy = 0.5;
 		gravity = .01;
 		tailrx1 = rx;
@@ -101,11 +106,6 @@ public class Ball3 {
 
 	// moves the ball
 	public void plan(Ball3[] b) {
-
-		if (keyboard == 2) {
-			color++;
-			color = color % 6;
-		}
 
 		vy = vy - gravity;
 
@@ -566,7 +566,7 @@ public class Ball3 {
 		StdDraw.setXscale(-1.5, 1.5);
 		StdDraw.setYscale(-1.5, 1.5);
 
-		Ball3 a = new Ball3(0, -1, -1, -1);
+		Ball3 a = new Ball3(0, 1, -1, -1);
 		Ball3 b = new Ball3(2, 1, 1, -1);
 		a.setTarget(b);
 		b.setTarget(a);
